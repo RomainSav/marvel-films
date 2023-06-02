@@ -1,0 +1,137 @@
+import type { ISourceOptions } from "tsparticles-engine";
+
+export const particlesConfig: ISourceOptions = {
+  fullScreen: {
+    enable: true,
+    zIndex: 1
+  },
+  particles: {
+    number: {
+      value: 280,
+      density: {
+        enable: true,
+        "value_area": 789.1476416322727
+      }
+    },
+    color: {
+      value: "#FFA6AA"
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#000000"
+      },
+      polygon: {
+        "nb_sides": 5
+      }
+    },
+    opacity: {
+      value: 0.48927153781200905,
+      random: false,
+      anim: {
+        enable: true,
+        speed: .2,
+        "opacity_min": 0,
+        sync: false
+      }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 2,
+        "size_min": 0,
+        sync: false
+      }
+    },
+    "line_linked": {
+      enable: false,
+      distance: 150,
+      color: "#FFFFFF",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: .2,
+      direction: "none",
+      random: true,
+      straight: false,
+      "out_mode": "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    "detect_on": "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "bubbble"
+      },
+      onclick: {
+        enable: true,
+        mode: "push"
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 400,
+        "line_linked": {
+          opacity: 1
+        }
+      },
+      bubble: {
+        distance: 83.91608391608392,
+        size: 1,
+        duration: 3,
+        opacity: 1,
+        speed: 3
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      },
+      push: {
+        "particles_nb": 4
+      },
+      remove: {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+  // particles: {
+  //   number: {
+  //     value: 25,
+  //     density: {
+  //       enable: true,
+  //       area: 500
+  //     }
+  //   },
+  //   opacity: {
+  //     value: .6,
+  //     random: false
+  //   },
+  //   size: {
+  //     value: 1,
+  //     random: true
+  //   },
+  //   "line_linked": {
+  //     enable: true,
+  //     distance: 160,
+  //     color: "#FFA1A5",
+  //     opacity: .5
+  //   },
+  //   move: {
+  //     enable: true
+  //   }
+  // }
+};
