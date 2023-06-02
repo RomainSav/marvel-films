@@ -1,0 +1,11 @@
+# Dependencies
+package-lock.json
+node_modules
+
+# Build
+.next
+build
+
+# IDE
+.vscode
+.idea
