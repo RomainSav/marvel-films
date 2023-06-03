@@ -22,7 +22,7 @@ export default {
       primary: "#EE1D23",
       white: {
         DEFAULT: "#FFFFFF",
-        1: "#F5F5F5",
+        1: "#BBBBBB",
         2: "#EEEDED"
       },
 
@@ -30,6 +30,10 @@ export default {
         1: "#090909",
         2: "#1B1B1B",
         3: "#323232"
+      },
+
+      card: {
+        1: "rgba(0, 0, 0, .7)"
       }
     }
   }
