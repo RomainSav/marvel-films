@@ -1,5 +1,3 @@
-"use client";
-
 import type { ReactElement } from "react";
 import type { MovieCardProps } from "./movie-card.type";
 import Link from "next/link";
