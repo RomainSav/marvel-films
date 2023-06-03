@@ -7,7 +7,7 @@ import { dayJS } from "@lib/utils/day-js";
 
 export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
   return (
-    <Link key={movie.id} href="/movies/" className="group relative rounded-md">
+    <Link key={movie.id} href="/movies" className="group relative rounded-md">
       <Image
         src={"/images/movies/" + movie.thumbnail}
         alt={movie.title + " Thumbnail"}
