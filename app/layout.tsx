@@ -1,5 +1,3 @@
-"use client";
-
 import "@lib/styles/tailwind.css";
 
 import { Navbar } from "@lib/components/navbar";
