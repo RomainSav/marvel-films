@@ -1,9 +1,9 @@
 import type { ReactElement } from "react";
 
-const Home = (): ReactElement => {
+const Page = (): ReactElement => {
   return (
     <div></div>
   );
 };
 
-export default Home;
+export default Page;
