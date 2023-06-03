@@ -8,7 +8,7 @@ export const movies: Movie[] = [
     releasedAt: dayJS("05-02-2008").toDate(),
     directors: [],
     runningTime: 126,
-    thumbnail: "iron-man.jpg ",
+    thumbnail: "iron-man.jpg",
     actors: []
   },
   {
