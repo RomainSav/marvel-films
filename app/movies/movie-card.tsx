@@ -8,7 +8,7 @@ import { Loader } from "@lib/components/loader";
 
 export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
   return (
-    <Link key={movie.id} href="/" className="group relative rounded-md aspect-[9/16] h-96 w-full flex justify-center items-center">
+    <Link key={movie.id} href="/" className="group relative rounded-md aspect-[9/16] w-full flex justify-center items-center">
       <Loader />
 
       <Image
