@@ -33,13 +33,13 @@ export default {
       },
 
       card: {
-        1: "rgba(0, 0, 0, .7)"
+        1: "rgba(0, 0, 0, .3)"
       }
     },
 
     extend: {
       gridTemplateColumns: {
-        movies: "repeat(auto-fit, minmax(15rem, 1fr))"
+        movies: "repeat(auto-fill, minmax(15rem, 1fr))"
       }
     }
   }
