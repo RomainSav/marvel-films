@@ -4,15 +4,18 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import { dayJS } from "@lib/utils/day-js";
+import { Loader } from "@lib/components/loader";
 
 export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
   return (
-    <Link key={movie.id} href="/" className="group relative rounded-md aspect-[9/16] h-96 w-full">
+    <Link key={movie.id} href="/" className="group relative rounded-md aspect-[9/16] h-96 w-full flex justify-center items-center">
+      <Loader />
+
       <Image
         src={"/images/movies/" + movie.thumbnail}
         alt={movie.title + " Thumbnail"}
         fill
-        className="rounded-md object-contain" />
+        className="rounded-md object-cover" />
 
       <div className={clsx(
         "absolute p-4 w-full h-full bg-card-1 z-20 left-0 top-0 rounded-md opacity-0",
