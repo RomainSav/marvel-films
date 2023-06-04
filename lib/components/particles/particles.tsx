@@ -7,13 +7,11 @@ import { loadFull } from "tsparticles";
 import { particlesConfig } from "./particles.config";
 
 export const Particles = (): ReactElement | null => {
-  if (typeof window !== "undefined") {
-    const particlesInit = async(engine: Engine): Promise<void> => {
-      await loadFull(engine);
-    };
+  const particlesInit = async(engine: Engine): Promise<void> => {
+    await loadFull(engine);
+  };
 
-    return <ReactParticles id="tsparticles" options={particlesConfig} init={particlesInit} />;
-  }
+  if (typeof window === "undefined") return null;
 
-  return null;
+  return <ReactParticles id="tsparticles" options={particlesConfig} init={particlesInit} />;
 };
