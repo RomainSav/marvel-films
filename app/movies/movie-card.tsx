@@ -7,12 +7,12 @@ import { dayJS } from "@lib/utils/day-js";
 
 export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
   return (
-    <Link key={movie.id} href="/" className="group relative rounded-md">
+    <Link key={movie.id} href="/" className="group relative rounded-md aspect-[9/16] h-96 w-full">
       <Image
         src={"/images/movies/" + movie.thumbnail}
         alt={movie.title + " Thumbnail"}
-        width={300} height={900}
-        className="rounded-md" />
+        fill
+        className="rounded-md object-contain" />
 
       <div className={clsx(
         "absolute p-4 w-full h-full bg-card-1 z-20 left-0 top-0 rounded-md opacity-0",
