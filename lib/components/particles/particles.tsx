@@ -12,7 +12,7 @@ export const Particles = (): ReactElement | null => {
 
   const particlesInit = useCallback(async(engine: Engine) => await loadFull(engine), []);
 
-  if (!isDomLoaded) return null;
+  if (!isDomLoaded && typeof window !== "undefined") return null;
 
   return <ReactParticles id="tsparticles" options={particlesConfig} init={particlesInit} />;
 };
