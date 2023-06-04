@@ -1,6 +1,8 @@
 import { dayJS } from "@lib/utils/day-js";
 import type { Movie } from "./movies.type";
 
+export const getMovies = (): Movie[] => movies;
+
 export const movies: Movie[] = [
   {
     id: 1,
