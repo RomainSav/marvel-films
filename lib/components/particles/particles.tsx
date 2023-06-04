@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactElement, useCallback } from "react";
+import { type ReactElement } from "react";
 import type { Engine } from "tsparticles-engine";
 import { Particles as ReactParticles } from "react-particles";
 import { loadFull } from "tsparticles";
@@ -10,9 +10,14 @@ import { useIsDomLoaded } from "@lib/hooks/is-dom-loaded";
 export const Particles = (): ReactElement | null => {
   const isDomLoaded = useIsDomLoaded();
 
-  const particlesInit = useCallback(async(engine: Engine) => await loadFull(engine), []);
 
-  if (!isDomLoaded && typeof window !== "undefined") return null;
+  if (isDomLoaded) {
+    const particlesInit = async(engine: Engine): Promise<void> => {
+      await loadFull(engine);
+    };
 
-  return <ReactParticles id="tsparticles" options={particlesConfig} init={particlesInit} />;
+    return <ReactParticles id="tsparticles" options={particlesConfig} init={particlesInit} />;
+  }
+
+  return null;
 };
