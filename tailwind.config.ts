@@ -35,6 +35,12 @@ export default {
       card: {
         1: "rgba(0, 0, 0, .7)"
       }
+    },
+
+    extend: {
+      gridTemplateColumns: {
+        movies: "repeat(auto-fit, minmax(15rem, 1fr))"
+      }
     }
   }
 } satisfies Config;

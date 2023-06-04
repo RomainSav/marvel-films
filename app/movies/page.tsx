@@ -4,7 +4,7 @@ import { MovieCard } from "./movie-card";
 
 const Page = (): ReactElement => {
   return (
-    <div className="container grid grid-cols-5 mt-16 gap-10">
+    <div className="container grid grid-cols-movies gap-12 mt-16">
       {movies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
