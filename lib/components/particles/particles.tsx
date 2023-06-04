@@ -11,7 +11,7 @@ export const Particles = (): ReactElement | null => {
   const isDomLoaded = useIsDomLoaded();
   if (!isDomLoaded) return null;
 
-  const particlesInit = async (engine: Engine): Promise<void> => {
+  const particlesInit = async(engine: Engine): Promise<void> => {
     await loadFull(engine);
   };
 
