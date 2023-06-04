@@ -8,7 +8,7 @@ import { Loader } from "@lib/components/loader";
 
 export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
   return (
-    <Link key={movie.id} href="/" className="group relative rounded-md aspect-[9/16] w-full flex justify-center items-center">
+    <Link key={movie.id} href="/" className="group relative rounded-md aspect-[9/16] w-full flex justify-center items-center overflow-hidden">
       <Loader />
 
       <Image
@@ -20,21 +20,24 @@ export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
       <div className={clsx(
         "absolute p-4 w-full h-full bg-card-1 z-20 left-0 top-0 rounded-md opacity-0",
         "group-hover:opacity-100",
-        "border-2 border-primary",
-        "transition-opacity duration-200"
+        "transition-opacity duration-300"
       )}>
-        <div className="h-28">
-          <p className="text-white text-center font-medium mt-6 text-lg">{movie.title}</p>
+        <div className={clsx(
+          "absolute z-10 flex items-center bottom-6 left-0 -skew-x-12",
+          "w-52 p-4 bg-primary",
+          "-translate-x-56 group-hover:translate-x-0 transition-transform duration-300"
+        )}>
+          <div className="skew-x-12 ml-3">
+            <p className="text-white-2 font-medium text-xl md:text-lg">{movie.title}</p>
+            <p className="text-white-2 font-light italic text-sm">{dayJS(movie.releasedAt).format("MMMM DD, YYYY")}</p>
+          </div>
         </div>
 
-        <p className="absolute left-4 right-4 bottom-16 text-white-1 text-sm text-justify line-clamp-5">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero facilis
-          debitis recusandae quaerat a! Error aspernatur excepturi aliquam illum expedita, quidem nemo beatae
-        </p>
-
-        <div className="absolute left-4 bottom-4">
-          <p className="text-white-1 text-sm font-light italic">{dayJS(movie.releasedAt).format("MMMM DD, YYYY")}</p>
-        </div>
+        <div className={clsx(
+          "absolute flex items-center bottom-4 left-2 -skew-x-12",
+          "w-52 h-12 bg-white",
+          "-translate-x-56 group-hover:translate-x-0 transition-transform duration-300 delay-75"
+        )} />
       </div>
     </Link>
   );
