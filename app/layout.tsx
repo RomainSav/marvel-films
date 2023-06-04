@@ -1,7 +1,6 @@
 import "@lib/styles/tailwind.css";
 
 import { Navbar } from "@lib/components/navbar";
-import { Particles } from "@lib/components/particles";
 import type { Metadata } from "next";
 import type { PropsWithChildren, ReactElement } from "react";
 
@@ -13,7 +12,7 @@ const RootLayout = ({ children }: PropsWithChildren): ReactElement => {
   return (
     <html lang="fr">
       <body className="bg-gray-1">
-        <Particles />
+        {/* <Particles /> */}
 
         <main className="relative z-20">
           <Navbar />
