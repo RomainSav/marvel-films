@@ -1,13 +1,12 @@
 import type { ReactElement } from "react";
 import type { MovieCardProps } from "./movie-card.type";
-import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import { dayJS } from "@lib/utils/day-js";
 
 export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
   return (
-    <Link key={movie.id} href="/" className="group relative rounded-md">
+    <a key={movie.id} href="/" className="group relative rounded-md">
       <Image
         src={"/images/movies/" + movie.thumbnail}
         alt={movie.title + " Thumbnail"}
@@ -33,6 +32,6 @@ export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
           <p className="text-white-1 text-sm font-light italic">{dayJS(movie.releasedAt).format("MMMM DD, YYYY")}</p>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
