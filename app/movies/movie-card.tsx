@@ -3,7 +3,6 @@ import type { MovieCardProps } from "./movie-card.type";
 import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
-import { dayJS } from "@lib/utils/day-js";
 import { Loader } from "@lib/components/loader";
 
 export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
@@ -29,7 +28,7 @@ export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
         )}>
           <div className="skew-x-12 ml-3">
             <p className="text-white-2 font-medium text-xl md:text-lg">{movie.title}</p>
-            <p className="text-white-2 font-light italic text-sm">{dayJS(movie.releasedAt).format("MMMM DD, YYYY")}</p>
+            <p className="text-white-2 font-light italic text-sm">{movie.releasedAt.format("MMMM DD, YYYY")}</p>
           </div>
         </div>
 
