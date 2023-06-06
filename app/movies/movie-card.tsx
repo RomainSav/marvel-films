@@ -4,10 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import { Loader } from "@lib/components/loader";
+import { stringToSlug } from "@lib/utils/slug";
 
 export const MovieCard = ({ movie }: MovieCardProps): ReactElement => {
   return (
-    <Link key={movie.id} href="/" className="group relative rounded-md aspect-[9/16] w-full flex justify-center items-center overflow-hidden">
+    <Link key={movie.id}
+      href={"/movies/" + stringToSlug(movie.id, movie.title)}
+      className="group relative rounded-md aspect-[9/16] w-full flex justify-center items-center overflow-hidden">
       <Loader />
 
       <Image

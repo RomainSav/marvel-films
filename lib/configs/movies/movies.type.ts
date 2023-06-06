@@ -3,6 +3,7 @@ import type { Dayjs } from "dayjs";
 export type Movie = {
   id: number;
   title: string;
+  overview: string;
   releasedAt: Dayjs;
   directors: string[];
   runningTime?: number;

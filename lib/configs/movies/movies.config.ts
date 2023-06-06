@@ -3,10 +3,20 @@ import type { Movie } from "./movies.type";
 
 export const getMovies = (): Movie[] => movies;
 
+export const getMovie = (id: number): Movie | null => {
+  return movies.find((movie) => movie.id === id) ?? null;
+};
+
 export const movies: Movie[] = [
   {
     id: 1,
     title: "Iron Man",
+    overview: [
+      "2008's Iron Man tells the story of Tony Stark, a billionaire industrialist and genius inventor who",
+      "is kidnapped and forced to build a devastating weapon. Instead, using his intelligence and ingenuity,",
+      "Tony builds a high-tech suit of armor and escapes captivity. When he uncovers a nefarious plot with",
+      "global implications, he dons his powerful armor and vows to protect the world as Iron Man."
+    ].join(" "),
     releasedAt: dayJS("05/02/2008 00:00"),
     directors: [],
     runningTime: 126,
@@ -16,6 +26,7 @@ export const movies: Movie[] = [
   {
     id: 2,
     title: "The Incredible Hulk",
+    overview: "",
     releasedAt: dayJS("06/13/2008 00:00"),
     directors: [],
     runningTime: 112,
@@ -25,6 +36,7 @@ export const movies: Movie[] = [
   {
     id: 3,
     title: "Iron Man 2",
+    overview: "",
     releasedAt: dayJS("05/07/2010 00:00"),
     directors: [],
     runningTime: 125,
@@ -34,6 +46,7 @@ export const movies: Movie[] = [
   {
     id: 4,
     title: "Thor",
+    overview: "",
     releasedAt: dayJS("05/06/2011 00:00"),
     directors: [],
     runningTime: 114,
@@ -43,6 +56,7 @@ export const movies: Movie[] = [
   {
     id: 5,
     title: "Captain America: The First Avenger",
+    overview: "",
     releasedAt: dayJS("07/22/2011 00:00"),
     directors: [],
     runningTime: 124,
@@ -52,6 +66,7 @@ export const movies: Movie[] = [
   {
     id: 6,
     title: "The Avengers",
+    overview: "",
     releasedAt: dayJS("05/04/2012 00:00"),
     directors: [],
     runningTime: 143,
@@ -61,6 +76,7 @@ export const movies: Movie[] = [
   {
     id: 7,
     title: "Iron Man 3",
+    overview: "",
     releasedAt: dayJS("05/03/2013 00:00"),
     directors: [],
     runningTime: 131,
@@ -70,6 +86,7 @@ export const movies: Movie[] = [
   {
     id: 8,
     title: "Thor: The Dark World",
+    overview: "",
     releasedAt: dayJS("11/08/2013 00:00"),
     directors: [],
     runningTime: 112,
@@ -79,6 +96,7 @@ export const movies: Movie[] = [
   {
     id: 9,
     title: "Captain America: The Winter Soldier",
+    overview: "",
     releasedAt: dayJS("04/04/2014 00:00"),
     directors: [],
     runningTime: 136,
@@ -88,6 +106,7 @@ export const movies: Movie[] = [
   {
     id: 10,
     title: "Guardians of the Galaxy",
+    overview: "",
     releasedAt: dayJS("08/01/2014 00:00"),
     directors: [],
     runningTime: 122,
@@ -97,6 +116,7 @@ export const movies: Movie[] = [
   {
     id: 11,
     title: "Avengers: Age of Ultron",
+    overview: "",
     releasedAt: dayJS("05/01/2015 00:00"),
     directors: [],
     runningTime: 141,
@@ -106,6 +126,7 @@ export const movies: Movie[] = [
   {
     id: 12,
     title: "Ant-Man",
+    overview: "",
     releasedAt: dayJS("07/17/2015 00:00"),
     directors: [],
     runningTime: 117,
@@ -115,6 +136,7 @@ export const movies: Movie[] = [
   {
     id: 13,
     title: "Deadpool",
+    overview: "",
     releasedAt: dayJS("02/12/2016 00:00"),
     directors: [],
     runningTime: 108,
@@ -124,6 +146,7 @@ export const movies: Movie[] = [
   {
     id: 14,
     title: "Captain America: Civil War",
+    overview: "",
     releasedAt: dayJS("05/06/2016 00:00"),
     directors: [],
     runningTime: 147,
@@ -133,6 +156,7 @@ export const movies: Movie[] = [
   {
     id: 15,
     title: "Doctor Strange",
+    overview: "",
     releasedAt: dayJS("11/04/2016 00:00"),
     directors: [],
     runningTime: 115,
@@ -142,6 +166,7 @@ export const movies: Movie[] = [
   {
     id: 16,
     title: "Guardians of the Galaxy Vol. 2",
+    overview: "",
     releasedAt: dayJS("05/05/2017 00:00"),
     directors: [],
     runningTime: 137,
@@ -151,6 +176,7 @@ export const movies: Movie[] = [
   {
     id: 18,
     title: "Spider-Man: Homecoming",
+    overview: "",
     releasedAt: dayJS("07/07/2017 00:00"),
     directors: [],
     runningTime: 133,
@@ -160,6 +186,7 @@ export const movies: Movie[] = [
   {
     id: 19,
     title: "Thor: Ragnarok",
+    overview: "",
     releasedAt: dayJS("11/03/2017 00:00"),
     directors: [],
     runningTime: 130,
@@ -169,6 +196,7 @@ export const movies: Movie[] = [
   {
     id: 20,
     title: "Black Panther",
+    overview: "",
     releasedAt: dayJS("02/16/2018 00:00"),
     directors: [],
     runningTime: 134,
@@ -178,6 +206,7 @@ export const movies: Movie[] = [
   {
     id: 21,
     title: "Avengers: Infinity War",
+    overview: "",
     releasedAt: dayJS("04/27/2018 00:00"),
     directors: [],
     runningTime: 149,
@@ -187,6 +216,7 @@ export const movies: Movie[] = [
   {
     id: 22,
     title: "Deadpool 2",
+    overview: "",
     releasedAt: dayJS("05/18/2018 00:00"),
     directors: [],
     runningTime: 119,
@@ -196,6 +226,7 @@ export const movies: Movie[] = [
   {
     id: 23,
     title: "Ant-Man and the Wasp",
+    overview: "",
     releasedAt: dayJS("07/06/2018 00:00"),
     directors: [],
     runningTime: 118,
@@ -205,6 +236,7 @@ export const movies: Movie[] = [
   {
     id: 24,
     title: "Captain Marvel",
+    overview: "",
     releasedAt: dayJS("03/08/2019 00:00"),
     directors: [],
     runningTime: 124,
@@ -214,6 +246,7 @@ export const movies: Movie[] = [
   {
     id: 25,
     title: "Avengers: Endgame",
+    overview: "",
     releasedAt: dayJS("04/26/2019 00:00"),
     directors: [],
     runningTime: 181,
@@ -223,6 +256,7 @@ export const movies: Movie[] = [
   {
     id: 26,
     title: "Spider-Man: Far From Home",
+    overview: "",
     releasedAt: dayJS("07/02/2019 00:00"),
     directors: [],
     runningTime: 129,
@@ -232,6 +266,7 @@ export const movies: Movie[] = [
   {
     id: 27,
     title: "Black Widow",
+    overview: "",
     releasedAt: dayJS("07/09/2021 00:00"),
     directors: [],
     runningTime: 134,
@@ -241,6 +276,7 @@ export const movies: Movie[] = [
   {
     id: 28,
     title: "Shang-Chi and the Legend of the Ten Rings",
+    overview: "",
     releasedAt: dayJS("09/03/2021 00:00"),
     directors: [],
     runningTime: 132,
@@ -250,6 +286,7 @@ export const movies: Movie[] = [
   {
     id: 29,
     title: "Eternals",
+    overview: "",
     releasedAt: dayJS("11/05/2021 00:00"),
     directors: [],
     runningTime: 156,
@@ -259,6 +296,7 @@ export const movies: Movie[] = [
   {
     id: 30,
     title: "Spider-Man: No Way Home",
+    overview: "",
     releasedAt: dayJS("12/17/2021 00:00"),
     directors: [],
     runningTime: 148,
@@ -268,6 +306,7 @@ export const movies: Movie[] = [
   {
     id: 31,
     title: "Doctor Strange in the Multiverse of Madness",
+    overview: "",
     releasedAt: dayJS("05/06/2022 00:00"),
     directors: [],
     runningTime: 126,
@@ -277,6 +316,7 @@ export const movies: Movie[] = [
   {
     id: 32,
     title: "Thor: Love and Thunder",
+    overview: "",
     releasedAt: dayJS("07/08/2022 00:00"),
     directors: [],
     runningTime: 119,
@@ -286,6 +326,7 @@ export const movies: Movie[] = [
   {
     id: 33,
     title: "Black Panther: Wakanda Forever",
+    overview: "",
     releasedAt: dayJS("11/11/2022 00:00"),
     directors: [],
     runningTime: 161,
@@ -295,6 +336,7 @@ export const movies: Movie[] = [
   {
     id: 34,
     title: "Ant-Man and the Wasp: Quantumania",
+    overview: "",
     releasedAt: dayJS("02/17/2023 00:00"),
     directors: [],
     runningTime: 124,
@@ -304,6 +346,7 @@ export const movies: Movie[] = [
   {
     id: 35,
     title: "Guardians of the Galaxy Vol. 3",
+    overview: "",
     releasedAt: dayJS("05/05/2023 00:00"),
     directors: [],
     runningTime: 150,
@@ -313,6 +356,7 @@ export const movies: Movie[] = [
   {
     id: 36,
     title: "The Marvels",
+    overview: "",
     releasedAt: dayJS("11/10/2023 00:00"),
     directors: [],
     thumbnail: "the-marvels.jpg",
@@ -321,6 +365,7 @@ export const movies: Movie[] = [
   {
     id: 37,
     title: "Captain America: New World Order",
+    overview: "",
     releasedAt: dayJS("05/03/2024 00:00"),
     directors: [],
     thumbnail: "captain-america-new-world-order.jpg",
@@ -329,6 +374,7 @@ export const movies: Movie[] = [
   {
     id: 38,
     title: "Thunderbolts",
+    overview: "",
     releasedAt: dayJS("07/26/2024 00:00"),
     directors: [],
     thumbnail: "thunderbolts.jpg",
@@ -337,6 +383,7 @@ export const movies: Movie[] = [
   {
     id: 39,
     title: "Blade",
+    overview: "",
     releasedAt: dayJS("09/06/2024 00:00"),
     directors: [],
     thumbnail: "blade.jpg",
@@ -345,6 +392,7 @@ export const movies: Movie[] = [
   {
     id: 40,
     title: "Deadpool 3",
+    overview: "",
     releasedAt: dayJS("11/08/2024 00:00"),
     directors: [],
     thumbnail: "deadpool-3.jpg",
@@ -353,6 +401,7 @@ export const movies: Movie[] = [
   {
     id: 41,
     title: "Fantastic Four",
+    overview: "",
     releasedAt: dayJS("02/14/2025 00:00"),
     directors: [],
     thumbnail: "fantastic-four.jpg",
@@ -361,6 +410,7 @@ export const movies: Movie[] = [
   {
     id: 42,
     title: "Avengers: The Kang Dynasty",
+    overview: "",
     releasedAt: dayJS("05/02/2025 00:00"),
     directors: [],
     thumbnail: "avengers-the-kang-dynasty.jpg",
@@ -369,6 +419,7 @@ export const movies: Movie[] = [
   {
     id: 43,
     title: "Avengers: Secret Wars",
+    overview: "",
     releasedAt: dayJS("05/01/2026 00:00"),
     directors: [],
     thumbnail: "avengers-secret-wars.jpg",
