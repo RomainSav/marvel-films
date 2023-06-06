@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMediaQuery } from "usehooks-ts";
-import { type ReactElement, useState } from "react";
+import { type ReactElement, useState, useEffect } from "react";
 import { Hamburger } from "../hamburger";
 
 export const Navbar = (): ReactElement => {
@@ -15,6 +15,9 @@ export const Navbar = (): ReactElement => {
   const isDomLoaded = useIsDomLoaded();
   const matches = useMediaQuery("(max-width: 1029px)");
   const pathname = usePathname();
+
+  // Close mobile navbar on navigation
+  useEffect(() => setIsOpen(false), [pathname]);
 
   if (!isDomLoaded) return (
     <nav className="border-[1px] border-b-gray-3 h-16" />
