@@ -5,8 +5,12 @@ export type Movie = {
   title: string;
   overview: string;
   releasedAt: Dayjs;
-  directors: string[];
   runningTime?: number;
   thumbnail: string;
-  actors: string[];
+  series: string;
+  directors: string[];
+  writters: string[];
+  characters: string[];
+  productionCountries: string[];
+  trailer: string;
 };
