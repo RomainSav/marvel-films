@@ -3,6 +3,8 @@ import type { MovieProps } from "./page.type";
 import { getMovie } from "@lib/configs/movies";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import Link from "next/link";
 
 const MoviePage = ({ params }: MovieProps): ReactElement => {
   const id = Number(params.slug.split("-")[0]);
@@ -11,6 +13,11 @@ const MoviePage = ({ params }: MovieProps): ReactElement => {
 
   return (
     <div className="container mt-12 md:mt-16">
+      <Link href="/movies" className="text-white-1 flex items-center gap-2 w-fit mb-6">
+        <AiOutlineArrowLeft />
+        <p>Back</p>
+      </Link>
+
       <div className="grid grid-cols-1 lg:grid-cols-[20rem_1fr] gap-12">
         <div className="relative aspect-[9/16] w-full max-w-md mx-auto lg:mx-0">
           <Image src={"/images/movies/" + movie.thumbnail} alt={movie.title + " Thumbnail"} fill className="object-cover rounded-md" />
