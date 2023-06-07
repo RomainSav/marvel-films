@@ -61,7 +61,7 @@ export const movies: Movie[] = [
       "confront a powerful new enemy."
     ].join(" "),
     releasedAt: dayJS("05/07/2010 00:00"),
-    series: "Iron",
+    series: "Iron Man",
     directors: ["Jon Favreau"],
     runningTime: 125,
     thumbnail: "iron-man-2.jpg",
