@@ -1,5 +1,6 @@
 import { dayJS } from "@lib/utils/day-js";
 import type { Movie } from "./movies.type";
+import { BlackWidowNatashaRomanoff, HulkBruceBanner, IronManTonyStark, WarMachineJamesRodes } from "../characters/characters.config";
 
 export const getMovies = (): Movie[] => movies;
 
@@ -23,7 +24,7 @@ export const movies: Movie[] = [
     series: "Iron Man",
     directors: ["Jon Favreau"],
     writters: ["Mark Fergus", "Hawk Ostby", "Art Marcum", "Matt Holloway"],
-    characters: [],
+    characters: [IronManTonyStark, WarMachineJamesRodes],
     productionCountries: ["United States", "Canada"],
     trailer: ""
   },
@@ -46,7 +47,7 @@ export const movies: Movie[] = [
     runningTime: 112,
     thumbnail: "the-incredible-hulk.jpg",
     writters: ["Zak Penn"],
-    characters: [],
+    characters: [HulkBruceBanner, IronManTonyStark],
     productionCountries: ["United States"],
     trailer: ""
   },
@@ -65,7 +66,7 @@ export const movies: Movie[] = [
     runningTime: 125,
     thumbnail: "iron-man-2.jpg",
     writters: ["Justin Theroux"],
-    characters: [],
+    characters: [IronManTonyStark, WarMachineJamesRodes, BlackWidowNatashaRomanoff],
     productionCountries: ["United States"],
     trailer: ""
   },

@@ -39,7 +39,8 @@ export default {
 
     extend: {
       gridTemplateColumns: {
-        movies: "repeat(auto-fill, minmax(15rem, 1fr))"
+        movies: "repeat(auto-fill, minmax(15rem, 1fr))",
+        characters: "repeat(auto-fill, minmax(12rem, 1fr))"
       }
     }
   }

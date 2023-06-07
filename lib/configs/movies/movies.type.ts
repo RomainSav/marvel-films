@@ -1,4 +1,5 @@
 import type { Dayjs } from "dayjs";
+import type { Character } from "../characters/characters.type";
 
 export type Movie = {
   id: number;
@@ -10,7 +11,7 @@ export type Movie = {
   series: string;
   directors: string[];
   writters: string[];
-  characters: string[];
+  characters: Character[];
   productionCountries: string[];
   trailer: string;
 };

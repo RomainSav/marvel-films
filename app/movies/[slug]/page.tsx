@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { TextSection } from "./text-section";
+import { CharactersSection } from "./characters.section";
 
 const MoviePage = ({ params }: MovieProps): ReactElement => {
   const id = Number(params.slug.split("-")[0]);
@@ -54,6 +55,8 @@ const MoviePage = ({ params }: MovieProps): ReactElement => {
           )}
         </div>
       </div>
+
+      <CharactersSection movie={movie} />
     </div>
   );
 };
